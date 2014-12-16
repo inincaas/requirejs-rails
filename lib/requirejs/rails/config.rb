@@ -17,6 +17,9 @@ module Requirejs::Rails
       self.tmp_dir = application.root + 'tmp'
       self.bin_dir = Pathname.new(__FILE__+'/../../../../bin').cleanpath
 
+      self.manifest = nil
+      self.js_compressor = nil
+
       self.source_dir = self.tmp_dir.join("requirejs/src")
       self.build_dir = self.tmp_dir.join("requirejs/dst")
       self.target_dir = application.root + 'public/assets'
