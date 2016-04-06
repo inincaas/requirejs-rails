@@ -20,6 +20,14 @@ module Requirejs
           BOWER_PATH_PATTERN
       ]
 
+      self.manifest = nil
+      self.js_compressor = nil
+
+      self.source_dir = self.tmp_dir.join("requirejs/src")
+      self.build_dir = self.tmp_dir.join("requirejs/dst")
+      self.target_dir = application.root + 'public/assets'
+      self.rjs_path   = self.bin_dir+'r.js'
+
       def initialize(application)
         super
 
